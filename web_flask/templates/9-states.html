@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<HTML lang="en">
+  <HEAD>
+    <TITLE>HBNB</TITLE>
+  </HEAD>
+  <BODY>
+    {% if every %}
+    <H1>States</H1>
+    {% elif one %}
+    <H1>State: {{state_name}}</H1>
+    {% else %}
+    <H1>Not found!</H1>
+    {% endif %}
+    {% if one %}
+    <H3>Cities:</H3>
+    <UL>
+      {% for city_id, city_name in city_list %}
+      <LI>{{city_id}}: <B>{{city_name}}</B></LI>
+      {% endfor %}
+    </UL>
+    {% endif %}
+    {% if every %}
+    <UL>
+      {% for state_id, state_name in state_list %}
+      <LI>{{state_id}}: <B>{{state_name}}</B></LI>
+      {% endif %}
+    </UL>
+  </BODY>
+</HTML>
